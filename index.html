@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Google.com</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="header">
+        <div class="headin" id="navi">
+          <div class="headin">Daniel</div>
+          <div class="headin">Gmail</div>
+          <div class="headin">Images</div>
+          <div class="headin" id="apps"></div>
+            <div class="app_drawer_outer" id="app_drawer_outer">
+              <div class="app_drawer_inter" id="app_drawer_inter">
+                <ul class="app_icons_top">
+                  <li class="app_icons"><div class="iconimg"  id="myaccount"></div><div class="icontext">My Account</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="googlesearch"></div><div class="icontext">Search</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="maps"></div><div class="icontext">Maps</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="youtube"></div><div class="icontext">Youtube</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="play"></div><div class="icontext">Play</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="news"></div><div class="icontext">News</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="gmail"></div><div class="icontext">Gmail</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="drive"></div><div class="icontext">Drive</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="calendar"></div><div class="icontext">Calendar</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="googleplus"></div><div class="icontext">Google+</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="translate"></div><div class="icontext">Translate</div></li>
+                  <li class="app_icons"><div class="iconimg"  id="photos"></div><div class="icontext">Photos</div></li>
+                </ul>
+              </div>
+            </div>
+
+          <div class="headin" id="notifi"></div>
+          <div class="headin" id="user_img"></div>
+        </div>
+      </div>
+      <div class="main">
+        <center>
+          <div class= "content">
+              <img src="img/googlelogo_color_272x92dp.png" id ="glogo">
+              <div class="search_area">
+                <input type="text" id="search_box"/>
+                <img src="img/gmic.png" id="mic"/>
+              </div>
+              <div class="button_area">
+                <input class ="buttons" type="button" value="Google Search" id="search_button">
+                <input class ="buttons" type="button" value="I'm Feeling Lucky" id="lucky_button">
+              </div>
+          </div>
+        </center>
+      </div>
+      <div class="footer">
+        <div class= "feet" id ="footer_left">
+            <div class="footin">Advertising</div>
+            <div class="footin">Business</div>
+            <div class="footin">About</div>
+        </div>
+        <div class= "feet" id="footer_right">
+            <div class="footin">Privacy</div>
+            <div class="footin">Terms</div>
+            <div class="footin">Settings</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquary.js" charset="utf-8"></script>
+
+
+    <script>
+    $(document).ready(function(){
+      $("#apps").click(function (){
+         $("#app_drawer_outer").toggleClass("show");
+      });
+
+      $(window).click(function(e){
+        if(e.target.id != "app_drawer_outer" && e.target.className != "app_drawer_inner"&& e.target.className != "app_icons_top"&& e.target.className != "app_icons"&& e.target.className != "iconimg"&& e.target.className != "icontext" && e.target.id !="apps"){
+          $("#app_drawer_outer").removeClass("show");
+        }
+      });
+
+    });
+
+    </script>
+
+
+  </body>
+</html>
